@@ -2,7 +2,7 @@
 import React from "react";
 import NavItem from "./navItem";
 
-let navItems = [
+const navItems = [
   { text: "Home", href: "#" },
   { text: "Projects", href: "#" },
   { text: "About", href: "#" },

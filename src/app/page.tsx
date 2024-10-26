@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import fs from "fs";
 import path from "path";
@@ -28,7 +27,7 @@ function getExperiments() {
             date: metadata.date,
           };
         } catch (error) {
-          // Fallback if no metadata file exists
+          console.error(`Error reading metadata for ${dir}:`, error);
           return {
             slug: dir,
             title: dir.replace(/-/g, " "),

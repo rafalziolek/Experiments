@@ -14,6 +14,7 @@ export default function ShuffleText({
   const { displayText, shuffle } = useShuffle(text, {
     iterations: 5,
     speed: 70,
+    randomChars: randomChars ?? false,
   });
 
   return (
