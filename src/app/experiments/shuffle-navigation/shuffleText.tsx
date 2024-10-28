@@ -12,7 +12,7 @@ export default function ShuffleText({
   randomChars?: boolean;
 }) {
   const { displayText, shuffle } = useShuffle(text, {
-    iterations: 5,
+    iterations: 6,
     speed: 70,
     randomChars: randomChars ?? false,
   });

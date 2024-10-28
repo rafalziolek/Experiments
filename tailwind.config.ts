@@ -15,6 +15,9 @@ const config: Config = {
       fontFamily: {
         sans: ["--apple-system", "BlinkMacSystemFont", "sans-serif"],
       },
+      fontWeight: {
+        450: "450",
+      },
     },
   },
   plugins: [],

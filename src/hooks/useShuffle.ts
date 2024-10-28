@@ -14,11 +14,23 @@ export function useShuffle(
   const iterationCountRef = useRef(0);
 
   const shuffle = useCallback(() => {
+    console.log("Shuffle called - clearing previous interval");
+    // Clear any existing interval before starting a new one
+    if (intervalRef.current) {
+      clearInterval(intervalRef.current);
+    }
+
     iterationCountRef.current = 0;
 
     const animate = () => {
+      console.log("Starting new animation");
       intervalRef.current = setInterval(() => {
+        console.log(
+          `Iteration: ${iterationCountRef.current + 1}/${iterations}`
+        );
+
         if (iterationCountRef.current >= iterations) {
+          console.log("Animation complete - clearing interval");
           setDisplayText(text);
           clearInterval(intervalRef.current);
           return;
@@ -34,7 +46,10 @@ export function useShuffle(
     };
 
     animate();
-    return () => clearInterval(intervalRef.current);
+    return () => {
+      console.log("Cleanup function called");
+      clearInterval(intervalRef.current);
+    };
   }, [text, iterations, randomChars, speed]);
 
   return { displayText, shuffle };
