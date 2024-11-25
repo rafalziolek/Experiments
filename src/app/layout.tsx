@@ -13,7 +13,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="font-sans">
+      <body className="font-sans bg-white dark:bg-stone-950">
         {children}
         <footer className="flex flex-row gap-4 justify-between align-middle p-4 fixed bottom-0 w-full">
           <p className="text-lg tracking-tight font-semibold ">

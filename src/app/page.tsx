@@ -62,7 +62,7 @@ export default function Home() {
         {experiments.map((experiment) => (
           <li
             key={experiment.slug}
-            className="flex flex-row justify-between py-2 even:bg-gray-50 px-4"
+            className="flex flex-row justify-between py-2 even:bg-gray-50 dark:even:bg-stone-900 dark:even:bg-opacity-60 px-4"
           >
             <Link
               href={`/experiments/${experiment.slug}`}
