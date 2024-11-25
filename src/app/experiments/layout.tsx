@@ -7,7 +7,7 @@ export default function ExperimentsLayout({
 }>) {
   return (
     <>
-      <header className="flex flex-col gap-4 px-4 py-4">
+      <header className="flex flex-col gap-4 px-4 py-4 fixed text-white mix-blend-exclusion z-10">
         <Link className="text-xl font-sans font-bold" href="/">
           ← Experiments
         </Link>

@@ -13,9 +13,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="font-sans bg-white dark:bg-stone-950">
+      <body className="font-sans">
         {children}
-        <footer className="flex flex-row gap-4 justify-between align-middle p-4 fixed bottom-0 w-full">
+        <footer className="flex flex-row gap-4 justify-between align-middle p-4 fixed bottom-0 w-full mix-blend-difference text-white">
           <p className="text-lg tracking-tight font-semibold ">
             Made by{" "}
             <a
