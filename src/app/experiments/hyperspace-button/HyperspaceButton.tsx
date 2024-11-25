@@ -169,7 +169,7 @@ export default function HyperspaceButton({
         cancelAnimationFrame(animationFrameRef.current);
       }
     };
-  }, [isHovered]);
+  }, [isHovered, initStars, updateAndDrawStars]);
 
   return (
     <button
